@@ -2,7 +2,7 @@ FROM eclipse-temurin:21 AS build
 
 WORKDIR /app
 
-COPY api/ .
+COPY . .
 
 RUN chmod +x gradlew
 
