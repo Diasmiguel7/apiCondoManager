@@ -2,13 +2,13 @@ FROM eclipse-temurin:21 AS build
 
 WORKDIR /app
 
-COPY . .
+COPY api/ .
 
 RUN chmod +x gradlew
 
 RUN ./gradlew clean bootJar --stacktrace --info --no-daemon
 
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
